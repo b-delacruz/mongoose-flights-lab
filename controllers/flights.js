@@ -49,10 +49,15 @@ function deleteFlight(req, res) {
   })
 }
 
+function edit(req,res) {
+  console.log('Hey This Works!')
+}
+
 export{
   newFlight as new,
   create,
   index,
   show,
   deleteFlight as delete,
+  edit
 }
