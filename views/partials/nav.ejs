@@ -1,10 +1,22 @@
 </head>
 <body>
   <nav>
-		<i class="fas fa-film fa-2x"></i>  
+
+    <span style="font-size: 48px; color: Dodgerblue;">
+      <a href="/">
+        <i class="fa-solid fa-plane-departure fa-l"></i>
+      </a>
+    </span>
+  
     <a 
       href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>
     >
       ADD FLIGHT
+    </a>
+
+    <a 
+      href="/flights/index" <%- title === 'All Flights' ? 'class="active"' : '' %>
+    >
+      ALL FLIGHTS
     </a>
   </nav>
