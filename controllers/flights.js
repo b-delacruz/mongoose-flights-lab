@@ -6,6 +6,11 @@ function newFlight(req, res) {
   })
 }
 
+function create(req, res) {
+  res.redirect("/")
+}
+
 export{
   newFlight as new,
+  create
 }
