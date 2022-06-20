@@ -34,6 +34,9 @@ function show(req, res) {
       flight: flight,
     })
   })
+  .catch(error => {
+    res.redirect('/flights/index')
+  })
 }
 
 export{
