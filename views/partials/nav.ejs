@@ -1,29 +1,28 @@
 </head>
 <body>
   <nav>
-
+    <div id="nav-bar">
     <span style="font-size: 48px; color: Dodgerblue;">
       
       <a href="/">
-        <div id="plane">
           <i class="fa-solid fa-plane-departure fa-l"></i>
-        </div>
       </a>
     </span>
   
     <a 
       href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>
     > 
-      <div id="add-flights">
+
         ADD FLIGHT
-      </div>
+      
     </a>
 
     <a 
       href="/flights/index"<%- title === 'All Flights' ? 'class="active"' : '' %>
     >
-      <div id="all-flights">
+    
         ALL FLIGHTS
-      </div>
+    
     </a>
+    </div>
   </nav>

@@ -3,16 +3,16 @@ h1{
   justify-content: center;
 }
 
+a{
+  text-decoration: none;
+}
+
 #flights-index{
   display: flex;
   justify-content: center;
   padding: 1px;
-  
 }
 
-a{
-  text-decoration: none;
-}
 
 #add-flight, #all-flight{
   padding: 12px;
