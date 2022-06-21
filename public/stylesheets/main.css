@@ -1,0 +1,32 @@
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+#flights-index{
+  display: flex;
+  justify-content: center;
+  padding: 1px;
+  
+}
+
+a{
+  text-decoration: none;
+}
+
+#add-flight, #all-flight{
+  padding: 12px;
+  color: black;
+  background-color: hsla(334, 100%, 50%, 0.851);
+  color: white;
+  border-width: 1px;
+  border-radius: 25px;
+  margin: 15px 30px;
+  width: 150px;
+  text-align: center;
+
+}
+
+#plane{
+  color: blue;
+}

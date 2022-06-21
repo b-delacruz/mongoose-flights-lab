@@ -1,8 +1,33 @@
 <%- include('./partials/html-head') %>
-<%- include('./partials/nav') %>
+</head>
+
+<body>
+  <nav>
+    <span style="font-size: 48px; color: Dodgerblue;">
+      <a href="/">
+        <div id="plane">
+          <i class="fa-solid fa-plane-departure fa-l"></i>
+        </div>
+      </a>
+    </span>
+  </nav>
 
 <main>
   <h1><%= title %></h1>
 </main>
+
+<div id="flights-index">
+  <a href="/flights/new"> 
+    <div id="add-flight">
+      ADD FLIGHT
+    </div>
+  </a>
+  
+  <a href="/flights/index">
+    <div id="all-flight">
+      ALL FLIGHTS
+    </div>
+  </a>
+</div>
 
 <%- include("./partials/footer") %>
