@@ -21,11 +21,15 @@ function create(req, res) {
 }
 
 function index(req, res) {
+  const newFlight = new Flight()
+  const defaultDate = newFlight.departure
+  const departDate = defaultDate.toISOString().slice(0,16)
   Flight.find({})
   .then(flights => {
     res.render('flights/index', {
       title: "Mongoose Flights",
       flights: flights,
+      departure: departDate,
     })
   })
 }

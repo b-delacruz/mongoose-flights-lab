@@ -2,6 +2,13 @@ import mongoose from "mongoose"
 
 const Schema = mongoose.Schema
 
+const ticketSchema = new Schema({
+  ticket: String,
+  price: { type: Number, min: 0 }
+}, {
+  timestamps: true
+})
+
 const flightSchema = new Schema({
   airline: {
     type:String,
@@ -25,7 +32,8 @@ const flightSchema = new Schema({
       today.setFullYear(oneYear)
       return today
     }
-  }
+  },
+  tickets: [ticketSchema]
 }, {
   timestamps: true
 })
