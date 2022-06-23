@@ -43,7 +43,7 @@ function show(req, res) {
     })
   })
   .catch(error => {
-    res.redirect('/flights/index')
+    res.redirect('/')
   })
 }
 
@@ -73,7 +73,22 @@ function edit(req,res) {
 function update(req, res) {
   Flight.findByIdAndUpdate(req.params.id, req.body)
   .then(flight => {
-    res.redirect(`/flights/show/${flight._id}`)
+    res.redirect(`/flights/${flight._id}`)
+  })
+  .catch(error => {
+    res.redirect('/')
+  })
+}
+
+function createTicket(req, res) {
+  console.log(req.body)
+  Flight.findById(req.params.id)
+  .then(flight => {
+    flight.tickets.push(req.body)
+    flight.save()
+    .then(() => {
+      res.redirect(`/flights/${flight._id}`)
+    })
   })
   .catch(error => {
     res.redirect('/')
@@ -88,4 +103,5 @@ export{
   deleteFlight as delete,
   edit,
   update,
+  createTicket
 }

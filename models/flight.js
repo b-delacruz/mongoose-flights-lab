@@ -3,8 +3,8 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema
 
 const ticketSchema = new Schema({
-  ticket: String,
-  price: { type: Number, min: 0 }
+  price: { type: Number, min: 0 },
+  seat: String,
 }, {
   timestamps: true
 })
@@ -33,7 +33,7 @@ const flightSchema = new Schema({
       return today
     }
   },
-  tickets: [ticketSchema]
+  tickets: [ticketSchema],
 }, {
   timestamps: true
 })
