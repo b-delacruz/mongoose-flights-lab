@@ -60,5 +60,21 @@
   <% } else { %>
   <h3>No Tickets</h3>
   <% } %>
+
+<h2> MEALS </h2>
+  <ul>
+    <% flight.meals.forEach(mealOrder => { %>
+      <li><%= mealOrder.name %></li>
+    <% }) %>
+  </ul>
+
+<form id="add-meal-to-ticket" action="/flights/<%= flight._id %>/meals" method="POST">
+  <select name="mealsId">
+    <% meals.forEach(function(meal) { %>
+      <option value="<%= meal._id %>"><%= meal.name %></option>
+    <% }) %>
+  </select>
+  <button type="submit">Great Choice!</button>
+</form>
    
 <%- include("../partials/footer") %>

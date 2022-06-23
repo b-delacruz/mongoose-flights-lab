@@ -8,10 +8,11 @@ router.get('/new', flightsCtrl.new)
 router.post('/', flightsCtrl.create)
 router.get('/index', flightsCtrl.index)
 router.get('/:id', flightsCtrl.show)
-router.delete('/:id', flightsCtrl.delete)
 router.get('/:id/edit', flightsCtrl.edit)
-router.put('/:id', flightsCtrl.update)
 router.post('/:id/tickets', flightsCtrl.createTicket)
+router.post('/:id/meals', flightsCtrl.addMeal)
+router.delete('/:id', flightsCtrl.delete)
+router.put('/:id', flightsCtrl.update)
 
 export {
   router
