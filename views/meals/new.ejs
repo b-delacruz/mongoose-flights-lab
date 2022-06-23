@@ -11,7 +11,9 @@
 </form>
 
 <select>
-
+  <% meal.forEach(function(meal) { %>
+    <option><%= meal.name %></option>
+  <% }) %>
 </select>
 
 <%- include("../partials/footer") %>

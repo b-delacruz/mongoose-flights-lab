@@ -1,8 +1,12 @@
 import { Meal } from "../models/meals.js"
 
 function newMeal(req, res) {
-  res.render('meals/new', {
-    title: 'Meals'
+  Meal.find({})
+  .then(meals => {
+    res.render('meals/new', {
+      title: 'Meals',
+      meals,
+    })
   })
 }
 
