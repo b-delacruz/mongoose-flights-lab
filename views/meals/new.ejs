@@ -11,9 +11,13 @@
 </form>
 
 <select>
-  <% meal.forEach(function(meal) { %>
+  <% meals.forEach(function(meal) { %>
     <option><%= meal.name %></option>
   <% }) %>
 </select>
+
+<% meals.forEach(function(meal) { %>
+  <div><%= meal.name %></div>
+<% }) %>
 
 <%- include("../partials/footer") %>

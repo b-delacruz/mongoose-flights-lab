@@ -5,13 +5,12 @@ function newMeal(req, res) {
   .then(meals => {
     res.render('meals/new', {
       title: 'Meals',
-      meals,
+      meals: meals,
     })
   })
 }
 
 function create(req, res) {
-  console.log(req.body)
   Meal.create(req.body)
   .then(meal => {
     res.redirect('/meals/new')
