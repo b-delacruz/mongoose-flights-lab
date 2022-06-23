@@ -30,7 +30,7 @@
   method="POST"
   >
   <label for="seat-input">Seat</label>
-  <input name="seat" placeholder="Must be A1 - F99" id="seat-input" autocomplete="off"></input>
+  <input name="seat" required pattern="[A-F][1-9]\d?" placeholder="Must be A1 - F99" id="seat-input" autocomplete="off"></input>
   <label for="price-input">Price:</label>
   <input name="price" placeholder="Input Price" id="price-input" autocomplete="off"> 
     
@@ -43,7 +43,7 @@
       <thead>
         <tr>
           <th>Date</th>
-          <th>Ticket No.</th>
+          <th>Seat</th>
           <th>Price</th>
         </tr>
       </thead>

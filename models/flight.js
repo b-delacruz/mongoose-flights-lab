@@ -4,7 +4,10 @@ const Schema = mongoose.Schema
 
 const ticketSchema = new Schema({
   price: { type: Number, min: 0 },
-  seat: String,
+  seat: {
+    type:String,
+    match: /[A-F][1-9]\d?/
+  },
 }, {
   timestamps: true
 })
