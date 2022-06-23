@@ -4,12 +4,13 @@ import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import logger from 'morgan'
-import methodOverride from 'method-override'
 import('./config/database.js')
+import methodOverride from 'method-override'
 
 // import routers
 import { router as indexRouter } from './routes/index.js'
 import { router as flightsRouter } from './routes/flights.js'
+import { router as mealsRouter } from './routes/meals.js'
 
 // set up app
 const app = express()
@@ -35,6 +36,7 @@ app.use(
 app.use(methodOverride('_method'))
 app.use('/', indexRouter)
 app.use('/flights', flightsRouter)
+app.use('/meals', mealsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -12,6 +12,10 @@ const ticketSchema = new Schema({
   timestamps: true
 })
 
+const mealSchema = new Schema({
+  name: String,
+})
+
 const flightSchema = new Schema({
   airline: {
     type:String,
@@ -37,6 +41,7 @@ const flightSchema = new Schema({
     }
   },
   tickets: [ticketSchema],
+  meals: [{ type: Schema.Types.ObjectId, ref:'Meal' }]
 }, {
   timestamps: true
 })
